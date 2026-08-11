@@ -1,0 +1,127 @@
+/* Giữ toàn cảnh hiển thị khi trạng thái sạt lở được bật. */
+.world.mudslide {
+  opacity: 1;
+}
+
+.world:not(.mudslide) path.mudslide {
+  opacity: 0;
+}
+
+.world.mudslide path.mudslide {
+  opacity: 1;
+}
+
+/* Cánh đồng hữu cơ là một trạng thái trực quan hoàn chỉnh. */
+.organic-field {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .65s ease;
+}
+
+.organic-soil,
+.mulch-row {
+  transition: fill .65s ease, opacity .65s ease;
+}
+
+.organic-crops {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  transform: scaleY(.25);
+  transition: transform .75s cubic-bezier(.2,.85,.25,1);
+}
+
+.compost-station,
+.ladybugs,
+.soil-life {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  transform: translateY(12px) scale(.8);
+  opacity: 0;
+  transition: opacity .5s ease .2s, transform .65s ease .15s;
+}
+
+.world.organic .organic-field {
+  opacity: 1;
+}
+
+.world.organic .organic-crops {
+  transform: scaleY(1);
+}
+
+.world.organic .compost-station,
+.world.organic .ladybugs,
+.world.organic .soil-life {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.world.organic .farm,
+.world.organic > svg > .crop {
+  opacity: .15;
+  transition: opacity .45s ease;
+}
+
+.world.organic .plain {
+  fill: #76543b;
+}
+
+.world.organic .toxic-smoke,
+.world.organic .toxic-runoff {
+  opacity: 0;
+}
+
+.world.organic .organic-leaf {
+  animation: leafSway 1.8s ease-in-out infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center bottom;
+}
+
+.world.organic .organic-leaf:nth-child(2n) {
+  animation-delay: .35s;
+}
+
+@keyframes leafSway {
+  from { transform: rotate(-1deg); }
+  to { transform: rotate(2deg); }
+}
+
+/* Bờ kè nhiều lớp xuất hiện như một công trình thật ở chân đồi. */
+.embankment {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  transform: translateY(22px) scale(.96);
+  transition: opacity .55s ease, transform .75s cubic-bezier(.2,.82,.25,1);
+}
+
+.world.has-embankment .embankment {
+  transform: translateY(0) scale(1);
+}
+
+.world.has-embankment .embankment-cap {
+  animation: stoneSettle .55s ease both;
+}
+
+.world.has-embankment .stone-courses path:nth-child(2n) {
+  animation: stoneSettle .65s ease .12s both;
+}
+
+.world.has-embankment .protected-flow {
+  animation: waterGlint 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes stoneSettle {
+  from { opacity: .25; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes waterGlint {
+  from { opacity: .35; }
+  to { opacity: .9; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .world.organic .organic-leaf,
+  .world.has-embankment .embankment-cap,
+  .world.has-embankment .stone-courses path,
+  .world.has-embankment .protected-flow { animation: none; }
+}
