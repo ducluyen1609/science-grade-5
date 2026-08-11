@@ -1,0 +1,25 @@
+/* Căn từng nguyên liệu vào đúng lòng đĩa thủy tinh. */
+.lab-canvas.dish .salt-particles {
+  transform: translateY(145px);
+}
+
+.lab-canvas.dish .pepper-particles {
+  transform: translateY(18px);
+}
+
+.lab-canvas.dish .sand-particles {
+  transform: translateY(4px);
+}
+
+.lab-canvas.dish .oil-layer {
+  transform: translateY(136px) scaleY(.72);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.lab-canvas.dish .salt-particles,
+.lab-canvas.dish .pepper-particles,
+.lab-canvas.dish .sand-particles,
+.lab-canvas.dish .oil-layer {
+  transition: opacity .45s ease, transform .45s ease;
+}
