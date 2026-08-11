@@ -1,23 +1,68 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tuáº§n 3 â€¢ Khoa há»c lá»›p 5</title>
-  <meta name="description" content="Trang lab Khoa há»c lá»›p 5 tuáº§n 3." />
-  <link rel="stylesheet" href="../assets/css/week.css" />
+  <title>Quầy pha chế Khoa học • Tuần 3</title>
+  <meta name="description" content="Lab tương tác phân biệt hỗn hợp và dung dịch dành cho học sinh lớp 5." />
+  <link rel="stylesheet" href="../assets/css/lab-tuan-03.css" />
+  <link rel="stylesheet" href="../assets/css/back-home.css" />
 </head>
 <body>
-  <main class="card">
-    <div class="week">Khoa há»c lá»›p 5 â€¢ Tuáº§n 3</div>
-    <div class="icon" aria-hidden="true">ðŸ§ª</div>
-    <h1>Lab tuáº§n 3</h1>
-    <p>Trang há»c táº­p nÃ y Ä‘Ã£ Ä‘Æ°á»£c táº¡o sáºµn trong há»‡ thá»‘ng 35 tuáº§n. Ná»™i dung vÃ  hoáº¡t Ä‘á»™ng tÆ°Æ¡ng tÃ¡c sáº½ Ä‘Æ°á»£c bá»• sung theo thiáº¿t káº¿ bÃ i há»c.</p>
-    <a class="home" href="../index.html">â† Trá»Ÿ vá» thÆ° viá»‡n</a>
-    <p><small>Â© <span data-year></span> Khoa há»c lá»›p 5</small></p>
-  </main>
-  <script src="../assets/js/week.js" defer></script>
+  <a class="back-home" href="../index.html" aria-label="Trở về thư viện 35 tuần">← Thư viện</a>
+  <div class="mix-app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-icon">⚗️</span><div><h1>Quầy pha chế Khoa học</h1><small>Hỗn hợp & Dung dịch • Tuần 3</small></div></div>
+      <nav class="phases" aria-label="Các phần của lab">
+        <button class="phase-tab active" data-phase="1">1 <span>Pha chế</span></button>
+        <button class="phase-tab" data-phase="2">2 <span>Ghi nhớ</span></button>
+        <button class="phase-tab" data-phase="3">3 <span>Phân loại</span></button>
+      </nav>
+    </header>
+    <main class="layout">
+      <aside class="panel" id="panel"></aside>
+      <section class="canvas-wrap">
+        <div class="lab-canvas" id="labCanvas">
+          <div class="canvas-head"><span class="scene-pill" id="scenePill">🧪 Bàn pha chế</span><span class="scene-pill" id="resultPill">Chưa pha chế</span></div>
+          <div class="experiment-scene active" id="experimentScene">
+            <svg viewBox="0 0 900 650" role="img" aria-label="Bàn thí nghiệm với đĩa, cốc nước, nguyên liệu và kính quan sát vi mô">
+              <defs><linearGradient id="barBg" x2="0" y2="1"><stop stop-color="#ccefeb"/><stop offset="1" stop-color="#fff0b4"/></linearGradient><linearGradient id="water3" x2="0" y2="1"><stop stop-color="#8bdbed" stop-opacity=".66"/><stop offset="1" stop-color="#42aed2" stop-opacity=".85"/></linearGradient><clipPath id="microClip"><circle cx="712" cy="190" r="112"/></clipPath></defs>
+              <rect width="900" height="650" fill="url(#barBg)"/><rect y="465" width="900" height="185" fill="#b97e54"/><rect y="465" width="900" height="18" fill="#87583c"/>
+              <g class="shelf" fill="#fff7de" stroke="#97694b" stroke-width="6"><rect x="35" y="115" width="185" height="265" rx="18"/><path d="M35 245h185"/></g><g font-size="36"><text x="62" y="205">🧂</text><text x="142" y="205">🌶️</text><text x="62" y="335">🏖️</text><text x="142" y="335">🛢️</text></g>
+              <g class="dish-view"><ellipse cx="390" cy="470" rx="180" ry="61" fill="#d9f2f4" opacity=".68" stroke="#62aeb8" stroke-width="9"/><ellipse cx="390" cy="465" rx="135" ry="36" fill="#f8ffff" opacity=".8"/></g>
+              <g class="beaker-view"><path d="M275 220h225v255a110 110 0 01-220 0V220" fill="#fff" opacity=".5" stroke="#58a9b7" stroke-width="9"/><path class="beaker-water" d="M288 335h199v135a99 99 0 01-199 0Z" fill="url(#water3)"/><ellipse class="water-surface" cx="388" cy="336" rx="99" ry="15" fill="#b8ecf2"/><g fill="none" stroke="#518a94" stroke-width="4"><path d="M280 280h35M280 330h35M280 380h35"/></g><g fill="#315e69" font-size="14" font-weight="900"><text x="320" y="285">200 ml</text><text x="320" y="335">150 ml</text></g></g>
+              <g class="salt-particles" fill="#fff" stroke="#c7dadd" stroke-width="2"><circle cx="350" cy="285" r="7"/><circle cx="390" cy="260" r="6"/><circle cx="430" cy="300" r="8"/><circle cx="370" cy="330" r="6"/><circle cx="420" cy="350" r="7"/></g>
+              <g class="pepper-particles" fill="#392f2b"><circle cx="330" cy="420" r="7"/><circle cx="370" cy="445" r="5"/><circle cx="420" cy="425" r="8"/><circle cx="455" cy="450" r="6"/><circle cx="395" cy="400" r="5"/></g>
+              <g class="sand-particles" fill="#c08a4b"><circle cx="325" cy="451" r="11"/><circle cx="352" cy="463" r="8"/><circle cx="385" cy="454" r="12"/><circle cx="420" cy="463" r="9"/><circle cx="455" cy="450" r="11"/></g>
+              <path class="oil-layer" d="M292 333Q340 315 388 332T484 333V360Q438 350 390 360T292 358Z" fill="#f3c84f" opacity=".9"/>
+              <g transform="translate(490 210)"><g class="stirrer"><rect x="-8" y="0" width="16" height="290" rx="8" fill="#e3f5f6" stroke="#77aeb5" stroke-width="4"/><circle cy="286" r="13" fill="#c8e8eb" stroke="#77aeb5" stroke-width="4"/></g></g>
+              <path class="vortex" d="M320 360Q390 325 460 360Q390 410 320 360Z" fill="none" stroke="#e8fbff" stroke-width="9" stroke-linecap="round"/>
+
+              <g class="micro-frame"><circle cx="712" cy="190" r="126" fill="#fffdf3" stroke="#244f52" stroke-width="15"/><path d="M795 278l78 85" stroke="#244f52" stroke-width="25" stroke-linecap="round"/><circle cx="712" cy="190" r="112" fill="#d8f5f5"/></g>
+              <g clip-path="url(#microClip)">
+                <g class="micro-idle" fill="#86d4e8"><circle cx="665" cy="150" r="12"/><circle cx="745" cy="135" r="10"/><circle cx="700" cy="215" r="13"/><circle cx="770" cy="230" r="11"/><circle cx="640" cy="240" r="10"/></g>
+                <g class="micro-solid"><g fill="#fff" stroke="#aebec0" stroke-width="3"><circle cx="660" cy="140" r="16"/><circle cx="735" cy="165" r="14"/><circle cx="690" cy="235" r="17"/></g><g fill="#3b302d"><circle cx="700" cy="125" r="12"/><circle cx="765" cy="215" r="15"/><circle cx="640" cy="210" r="11"/></g></g>
+                <g class="micro-dissolved"><g fill="#7acde5"><circle cx="640" cy="130" r="12"/><circle cx="700" cy="118" r="11"/><circle cx="770" cy="145" r="12"/><circle cx="650" cy="230" r="11"/><circle cx="735" cy="245" r="12"/><circle cx="785" cy="215" r="10"/></g><g fill="#fff" stroke="#aebec0" stroke-width="2"><circle cx="670" cy="170" r="6"/><circle cx="720" cy="150" r="6"/><circle cx="755" cy="195" r="6"/><circle cx="690" cy="215" r="6"/><circle cx="625" cy="185" r="6"/></g></g>
+                <g class="micro-sand"><g fill="#7acde5"><circle cx="650" cy="130" r="11"/><circle cx="730" cy="145" r="10"/><circle cx="785" cy="190" r="11"/></g><g fill="#bb8144" stroke="#7f542f" stroke-width="3"><circle cx="645" cy="260" r="18"/><circle cx="682" cy="270" r="15"/><circle cx="720" cy="260" r="20"/><circle cx="760" cy="272" r="16"/></g></g>
+                <g class="micro-oil"><g fill="#78cae2"><circle cx="655" cy="220" r="11"/><circle cx="720" cy="235" r="12"/><circle cx="770" cy="210" r="10"/></g><path d="M603 130Q660 95 718 126T824 125V173Q765 154 710 174T602 168Z" fill="#f0c74f"/></g>
+              </g>
+              <text x="712" y="49" text-anchor="middle" font-size="15" font-weight="900" fill="#244f52">KÍNH NHÌN VI MÔ</text>
+            </svg>
+            <div class="science-note" id="scienceNote"><button class="note-hotspot" id="noteHotspot" aria-label="Xem điều kiện tạo dung dịch">?</button><div><b>Ghi chú Khoa học</b><span>Chạm dấu hỏi để chốt kiến thức.</span></div></div>
+          </div>
+
+          <div class="challenge-scene" id="challengeScene">
+            <div class="conveyor"><div class="belt-lines"></div><div class="item-card" id="itemCard" draggable="true"><span id="itemIcon">🍋</span><b id="itemName">Nước chanh đường</b><small>Kéo em vào đúng giỏ!</small></div></div>
+            <div class="baskets"><button class="basket mixture-basket" data-basket="mixture"><span>🥗</span><b>HỖN HỢP</b><small>Vẫn nhìn thấy hoặc tách được các chất</small></button><button class="basket solution-basket" data-basket="solution"><span>🥤</span><b>DUNG DỊCH</b><small>Chất tan phân bố đều trong chất lỏng</small></button></div>
+            <div class="challenge-progress" id="challengeProgress"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="modal-layer" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-icon" id="modalIcon">💡</div><h2 id="modalTitle"></h2><p id="modalText"></p><button id="modalClose">Đã hiểu</button></div></div>
+  <canvas id="confetti"></canvas>
+  <script src="../assets/js/lab-tuan-03.js" defer></script>
   <script src="../assets/js/week-nav.js" defer></script>
 </body>
 </html>
-

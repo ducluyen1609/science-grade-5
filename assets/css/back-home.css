@@ -1,0 +1,28 @@
+.back-home {
+  position: fixed;
+  z-index: 26;
+  left: 14px;
+  bottom: 14px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: #173c36;
+  color: #fff;
+  text-decoration: none;
+  font-family: Nunito, "Segoe UI", sans-serif;
+  font-weight: 900;
+  box-shadow: 0 5px 0 #092a25;
+}
+
+.back-home:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.back-home:focus-visible {
+  outline: 4px solid #ffd166;
+  outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  .back-home { display: none; }
+}

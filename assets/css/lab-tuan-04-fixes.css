@@ -1,0 +1,123 @@
+/* Làm rõ thể tích khí thực sự co lại theo pít-tông. */
+.gas-chamber {
+  transition: width .18s ease;
+}
+
+.compression-arrows {
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.compressed .compression-arrows {
+  opacity: 1;
+}
+
+.compressed #gasParticles circle,
+.compressed #gasMicro circle {
+  fill: #ee8b55;
+}
+
+.gas-volume-label,
+.gas-pressure-label {
+  fill: #315d60;
+  font-size: 16px;
+  font-weight: 900;
+  text-anchor: middle;
+}
+
+.gas-pressure-label {
+  fill: #b65335;
+  opacity: 0;
+}
+
+.compressed .gas-pressure-label {
+  opacity: 1;
+}
+
+.compressed .compression-arrows path {
+  animation: pushArrow .65s ease-in-out infinite alternate;
+}
+
+/* Nâng riêng mặt nước, luôn giữ phần nước liền xuống đáy cốc. */
+.solid-station.moved .solid-water {
+  transform: none;
+}
+
+@keyframes pushArrow {
+  to { transform: translateX(-8px); }
+}
+
+/* Ba phương án của Chú Quạ đều có phản hồi trực quan. */
+.air-pump,
+.empty-jug,
+.air-bubbles {
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.crow-scene.trying-air .air-pump,
+.crow-scene.trying-air .air-bubbles {
+  opacity: 1;
+}
+
+.crow-scene.trying-air .air-pump {
+  animation: pumpPress .55s ease-in-out 2;
+  transform-box: fill-box;
+  transform-origin: center bottom;
+}
+
+.crow-scene.trying-air .air-bubbles circle {
+  animation: bubbleRise 1.15s ease-in infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.crow-scene.trying-air .air-bubbles circle:nth-child(2n) {
+  animation-delay: .22s;
+}
+
+.crow-scene.trying-water .empty-jug {
+  opacity: 1;
+  animation: jugTilt 1.1s ease-in-out both;
+  transform-box: fill-box;
+  transform-origin: left bottom;
+}
+
+.crow-scene.trying-water .last-drop {
+  animation: lastDrop .8s ease-in .35s both;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.option-air { background: #5597aa; box-shadow: 0 4px #376b79; }
+.option-water { background: #5aa7c4; box-shadow: 0 4px #377a94; }
+.option-stone { background: #8b7765; box-shadow: 0 4px #645243; }
+
+@keyframes pumpPress {
+  50% { transform: scaleY(.86); }
+}
+
+@keyframes bubbleRise {
+  from { transform: translateY(35px) scale(.6); opacity: 0; }
+  35% { opacity: 1; }
+  to { transform: translateY(-45px) scale(1.05); opacity: 0; }
+}
+
+@keyframes jugTilt {
+  35%, 75% { transform: rotate(-32deg); }
+  100% { transform: rotate(0); }
+}
+
+@keyframes lastDrop {
+  from { transform: translateY(0); opacity: 0; }
+  25% { opacity: 1; }
+  to { transform: translateY(120px); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .compressed .compression-arrows path,
+  .crow-scene.trying-air .air-pump,
+  .crow-scene.trying-air .air-bubbles circle,
+  .crow-scene.trying-water .empty-jug,
+  .crow-scene.trying-water .last-drop { animation: none; }
+}

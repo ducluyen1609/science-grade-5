@@ -1,23 +1,40 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tuáº§n 4 â€¢ Khoa há»c lá»›p 5</title>
-  <meta name="description" content="Trang lab Khoa há»c lá»›p 5 tuáº§n 4." />
-  <link rel="stylesheet" href="../assets/css/week.css" />
+  <title>Ba trạng thái của chất • Tuần 4</title>
+  <meta name="description" content="Lab Khoa học lớp 5 khám phá đặc điểm chất rắn, chất lỏng và chất khí." />
+  <link rel="stylesheet" href="../assets/css/lab-tuan-04.css" />
+  <link rel="stylesheet" href="../assets/css/lab-tuan-04-fixes.css" />
+  <link rel="stylesheet" href="../assets/css/back-home.css" />
 </head>
 <body>
-  <main class="card">
-    <div class="week">Khoa há»c lá»›p 5 â€¢ Tuáº§n 4</div>
-    <div class="icon" aria-hidden="true">ðŸ§ª</div>
-    <h1>Lab tuáº§n 4</h1>
-    <p>Trang há»c táº­p nÃ y Ä‘Ã£ Ä‘Æ°á»£c táº¡o sáºµn trong há»‡ thá»‘ng 35 tuáº§n. Ná»™i dung vÃ  hoáº¡t Ä‘á»™ng tÆ°Æ¡ng tÃ¡c sáº½ Ä‘Æ°á»£c bá»• sung theo thiáº¿t káº¿ bÃ i há»c.</p>
-    <a class="home" href="../index.html">â† Trá»Ÿ vá» thÆ° viá»‡n</a>
-    <p><small>Â© <span data-year></span> Khoa há»c lá»›p 5</small></p>
-  </main>
-  <script src="../assets/js/week.js" defer></script>
-  <script src="../assets/js/week-nav.js" defer></script>
+  <a class="back-home" href="../index.html" aria-label="Trở về thư viện 35 tuần">← Thư viện</a>
+  <div class="matter-app">
+    <header class="topbar"><div class="brand"><span class="brand-icon">🧊</span><div><h1>Phòng khám phá Vật chất</h1><small>Rắn • Lỏng • Khí — Tuần 4</small></div></div><nav class="phases" aria-label="Các phần học"><button class="phase-tab active" data-phase="1">1 <span>Phân loại</span></button><button class="phase-tab" data-phase="2">2 <span>Thí nghiệm</span></button><button class="phase-tab" data-phase="3">3 <span>Chú Quạ</span></button></nav></header>
+    <main class="layout"><aside class="panel" id="panel"></aside><section class="canvas-wrap"><div class="lab-canvas" id="labCanvas">
+      <div class="canvas-head"><span class="scene-pill" id="scenePill">🗂️ Bàn phân loại</span><span class="scene-pill" id="statusPill">0 / 6 chính xác</span></div>
+
+      <div class="sort-scene active" id="sortScene"><div class="matter-items" id="matterItems"></div><div class="matter-bins"><button class="matter-bin solid-bin" data-bin="solid"><span>🧊</span><b>THỂ RẮN</b><small>Có hình dạng và không gian xác định</small></button><button class="matter-bin liquid-bin" data-bin="liquid"><span>💧</span><b>THỂ LỎNG</b><small>Có thể tích xác định</small></button><button class="matter-bin gas-bin" data-bin="gas"><span>💨</span><b>THỂ KHÍ</b><small>Có thể nén hoặc giãn</small></button></div></div>
+
+      <div class="station-scene" id="stationScene"><svg viewBox="0 0 900 650" role="img" aria-label="Ba trạm thí nghiệm chất khí, chất lỏng và chất rắn">
+        <defs><linearGradient id="room4" x2="0" y2="1"><stop stop-color="#d7f1ec"/><stop offset="1" stop-color="#fff0bd"/></linearGradient><linearGradient id="water4" x2="0" y2="1"><stop stop-color="#8bd9ed"/><stop offset="1" stop-color="#3fadd2"/></linearGradient></defs><rect width="900" height="650" fill="url(#room4)"/><rect y="505" width="900" height="145" fill="#b67d55"/><rect y="505" width="900" height="15" fill="#80553c"/>
+        <g class="station gas-station"><text x="430" y="125" text-anchor="middle" class="svg-title">KHÍ CÓ THỂ BỊ NÉN</text><g class="syringe"><rect x="150" y="270" width="470" height="130" rx="24" fill="#fff" opacity=".58" stroke="#5d9aa4" stroke-width="9"/><rect id="gasChamber" class="gas-chamber" x="155" y="278" width="415" height="114" rx="18" fill="#bcecf3" opacity=".68"/><path d="M115 315h35v40h-35l-60-20Z" fill="#d9eff0" stroke="#5d9aa4" stroke-width="7"/><g id="gasParticles" fill="#67bad1"><circle data-base=".12" cy="310" r="10"/><circle data-base=".3" cy="360" r="9"/><circle data-base=".47" cy="325" r="11"/><circle data-base=".65" cy="370" r="8"/><circle data-base=".82" cy="310" r="10"/></g><g id="piston"><rect x="0" y="250" width="26" height="170" rx="8" fill="#6d8588"/><rect x="20" y="315" width="185" height="18" rx="8" fill="#8da2a4"/><rect x="198" y="275" width="24" height="100" rx="8" fill="#657d80"/></g><g class="compression-arrows" fill="none" stroke="#e46442" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M500 225H405l25-20M405 225l25 20"/><path d="M500 445H405l25-20M405 445l25 20"/></g><text id="gasVolumeLabel" class="gas-volume-label" x="360" y="465">Không gian khí: 100%</text><text class="gas-pressure-label" x="360" y="500">Các hạt bị ép sát — va chạm nhanh hơn!</text></g><g class="micro-view"><circle cx="742" cy="215" r="112"/><text x="742" y="82">KÍNH VI MÔ • KHÍ</text><g id="gasMicro" fill="#6dbdd3"><circle data-x="-62" data-y="-52" r="11"/><circle data-x="42" data-y="-60" r="10"/><circle data-x="-45" data-y="20" r="12"/><circle data-x="50" data-y="12" r="9"/><circle data-x="5" data-y="65" r="11"/><circle data-x="8" data-y="-5" r="9"/></g></g></g>
+        <g class="station liquid-station"><text x="440" y="110" text-anchor="middle" class="svg-title">100 ml NƯỚC — HÌNH DẠNG THAY ĐỔI</text><g class="cylinder"><path d="M160 190h155v300a77 77 0 01-155 0Z" fill="#fff" opacity=".52" stroke="#5d9aa4" stroke-width="8"/><path class="cylinder-water" d="M170 290h135v195a67 67 0 01-135 0Z" fill="url(#water4)"/><g stroke="#476e75" stroke-width="4"><path d="M160 290h35"/><path d="M160 350h28"/><path d="M160 410h28"/></g><text x="202" y="282" class="measure">100 ml</text></g><path class="pour-stream" d="M320 275Q430 300 500 405" fill="none" stroke="#5bc0df" stroke-width="18" stroke-linecap="round"/><g class="flask"><path d="M510 175h105v150l115 165a65 65 0 01-53 102H448a65 65 0 01-53-102l115-165Z" fill="#fff" opacity=".54" stroke="#5d9aa4" stroke-width="8"/><path class="flask-water" d="M430 475h266l34 49a65 65 0 01-53 68H448a65 65 0 01-53-68Z" fill="url(#water4)"/><path d="M430 475h55" stroke="#476e75" stroke-width="5"/><text x="492" y="467" class="measure">100 ml</text></g><g class="liquid-molecules" fill="#d9f7ff" opacity=".85"><circle cx="485" cy="535" r="10"/><circle cx="540" cy="515" r="9"/><circle cx="600" cy="550" r="11"/><circle cx="655" cy="520" r="9"/></g></g>
+        <g class="station solid-station"><text x="440" y="110" text-anchor="middle" class="svg-title">VIÊN ĐÁ GIỮ NGUYÊN HÌNH DẠNG</text><g class="plate"><ellipse cx="235" cy="480" rx="135" ry="42" fill="#e5f6f4" stroke="#65aab1" stroke-width="8"/><path class="stone on-plate" d="M190 440l30-45 62 5 35 40-27 42h-74Z" fill="#81766a" stroke="#554f48" stroke-width="6"/></g><g class="solid-beaker"><path d="M510 205h235v300a112 112 0 01-224 0V205" fill="#fff" opacity=".52" stroke="#5d9aa4" stroke-width="9"/><path class="solid-water" d="M525 385h205v112a102 102 0 01-205 0Z" fill="url(#water4)"/><path class="stone in-beaker" d="M585 445l30-45 62 5 35 40-27 42h-74Z" fill="#81766a" stroke="#554f48" stroke-width="6"/></g><g class="solid-micro" fill="#8d847b" stroke="#5f5750" stroke-width="3"><circle cx="380" cy="215" r="17"/><circle cx="420" cy="215" r="17"/><circle cx="460" cy="215" r="17"/><circle cx="380" cy="255" r="17"/><circle cx="420" cy="255" r="17"/><circle cx="460" cy="255" r="17"/></g></g>
+      </svg></div>
+
+      <div class="crow-scene" id="crowScene"><svg viewBox="0 0 900 650" role="img" aria-label="Chú quạ đứng cạnh bình nước cổ hẹp"><defs><linearGradient id="crowSky" x2="0" y2="1"><stop stop-color="#c9edeb"/><stop offset="1" stop-color="#fff1bc"/></linearGradient></defs><rect width="900" height="650" fill="url(#crowSky)"/><circle cx="780" cy="100" r="55" fill="#ffd665"/><path d="M0 495Q230 445 460 490T900 470V650H0Z" fill="#a97850"/>
+        <g class="crow"><ellipse cx="270" cy="340" rx="82" ry="105" fill="#27343b"/><circle cx="315" cy="245" r="58" fill="#26343c"/><path d="M360 242l92 28-92 24Z" fill="#e1a83c"/><circle cx="330" cy="230" r="9" fill="#fff"/><circle cx="333" cy="231" r="4" fill="#172126"/><path d="M220 335q-80 25-95 95 75 4 126-55Z" fill="#34464f"/><path d="M240 435l-18 75M292 438l12 72" stroke="#343332" stroke-width="12" stroke-linecap="round"/><path d="M205 510h45M280 510h47" stroke="#343332" stroke-width="10" stroke-linecap="round"/></g>
+        <g class="pitcher"><path d="M520 230h150v105q85 45 90 173a105 105 0 01-105 108H535a105 105 0 01-105-108q5-128 90-173V230Z" fill="#fff" opacity=".55" stroke="#5a99a4" stroke-width="10"/><path id="crowWater" d="M459 500Q595 485 730 500V530a80 80 0 01-80 78H540a80 80 0 01-80-78Z" fill="#55b9dc" opacity=".85"/><g id="pitcherStones" fill="#7e7469" stroke="#524d47" stroke-width="4"><circle data-stone="1" cx="540" cy="560" r="26"/><circle data-stone="2" cx="598" cy="565" r="27"/><circle data-stone="3" cx="655" cy="558" r="25"/><circle data-stone="4" cx="575" cy="520" r="25"/></g><g class="air-bubbles" fill="#dff8ff" stroke="#66bad0" stroke-width="3"><circle cx="525" cy="535" r="10"/><circle cx="550" cy="500" r="8"/><circle cx="530" cy="465" r="12"/><circle cx="565" cy="430" r="7"/></g><g stroke="#4f7e86" stroke-width="4"><path d="M670 480h35"/><path d="M670 420h35"/><path d="M670 360h35"/></g></g>
+        <g class="air-pump"><rect x="378" y="450" width="75" height="105" rx="12" fill="#70b8c7" stroke="#376f79" stroke-width="6"/><path d="M390 450v-45h50v45M415 555q20 25 90 5V520" fill="none" stroke="#376f79" stroke-width="9" stroke-linecap="round"/><rect x="392" y="386" width="46" height="18" rx="7" fill="#5d7f84"/></g>
+        <g class="empty-jug"><path d="M720 260h78v93q0 38-39 38t-39-38Z" fill="#eef9f7" stroke="#5a99a4" stroke-width="7"/><path d="M798 285q55 0 48 48-5 30-48 25" fill="none" stroke="#5a99a4" stroke-width="9"/><path d="M720 270l-35 20h35" fill="#eef9f7" stroke="#5a99a4" stroke-width="7"/><path class="last-drop" d="M685 310c14 18 14 32 0 32s-14-14 0-32Z" fill="#55b9dc"/></g>
+        <g class="hearts" fill="#ef6e91"><text x="390" y="210">♥</text><text x="430" y="180">♥</text><text x="470" y="220">♥</text></g><text x="600" y="200" text-anchor="middle" font-size="18" font-weight="900" fill="#315a57">Mỏ quạ cần nước đạt 90%</text>
+      </svg></div>
+    </div></section></main>
+  </div>
+  <div class="modal-layer" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-icon" id="modalIcon">💡</div><h2 id="modalTitle"></h2><p id="modalText"></p><button id="modalClose">Đã hiểu</button></div></div><canvas id="confetti"></canvas>
+  <script src="../assets/js/lab-tuan-04.js" defer></script><script src="../assets/js/week-nav.js" defer></script>
 </body>
 </html>
-
