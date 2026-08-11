@@ -1,23 +1,31 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tuáº§n 5 â€¢ Khoa há»c lá»›p 5</title>
-  <meta name="description" content="Trang lab Khoa há»c lá»›p 5 tuáº§n 5." />
-  <link rel="stylesheet" href="../assets/css/week.css" />
+  <title>Biến đổi hóa học • Tuần 5</title>
+  <meta name="description" content="Lab Khoa học lớp 5 khám phá sự biến đổi hóa học qua giấy, đường và than." />
+  <link rel="stylesheet" href="../assets/css/lab-tuan-05.css" />
+  <link rel="stylesheet" href="../assets/css/back-home.css" />
 </head>
 <body>
-  <main class="card">
-    <div class="week">Khoa há»c lá»›p 5 â€¢ Tuáº§n 5</div>
-    <div class="icon" aria-hidden="true">ðŸ§ª</div>
-    <h1>Lab tuáº§n 5</h1>
-    <p>Trang há»c táº­p nÃ y Ä‘Ã£ Ä‘Æ°á»£c táº¡o sáºµn trong há»‡ thá»‘ng 35 tuáº§n. Ná»™i dung vÃ  hoáº¡t Ä‘á»™ng tÆ°Æ¡ng tÃ¡c sáº½ Ä‘Æ°á»£c bá»• sung theo thiáº¿t káº¿ bÃ i há»c.</p>
-    <a class="home" href="../index.html">â† Trá»Ÿ vá» thÆ° viá»‡n</a>
-    <p><small>Â© <span data-year></span> Khoa há»c lá»›p 5</small></p>
-  </main>
-  <script src="../assets/js/week.js" defer></script>
-  <script src="../assets/js/week-nav.js" defer></script>
+  <a class="back-home" href="../index.html" aria-label="Trở về thư viện 35 tuần">← Thư viện</a>
+  <div class="chem-app">
+    <header class="topbar"><div class="brand"><span class="brand-icon">🧪</span><div><h1>Xưởng Biến đổi Hóa học</h1><small>Khoa học lớp 5 • Tuần 5</small></div></div><nav class="phases" aria-label="Các phần học"><button class="phase-tab active" data-phase="1">1 <span>Thí nghiệm</span></button><button class="phase-tab" data-phase="2">2 <span>Ghi nhớ</span></button><button class="phase-tab" data-phase="3">3 <span>Thử thách</span></button></nav></header>
+    <main class="layout"><aside class="panel" id="panel"></aside><section class="canvas-wrap"><div class="lab-canvas" id="labCanvas">
+      <div class="canvas-head"><span class="scene-pill" id="scenePill">🔥 Bàn thí nghiệm hóa học</span><span class="scene-pill" id="statusPill">0 / 3 hoàn thành</span></div>
+      <div class="experiment-scene active" id="experimentScene"><svg viewBox="0 0 960 650" role="img" aria-label="Ba thí nghiệm đốt giấy, đun đường và đốt than">
+        <defs><linearGradient id="chemBg" x2="0" y2="1"><stop stop-color="#d7f0e9"/><stop offset="1" stop-color="#fff0bd"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="960" height="650" fill="url(#chemBg)"/><rect y="495" width="960" height="155" fill="#ae7651"/><rect y="495" width="960" height="16" fill="#78513a"/>
+        <g class="station-card paper-card"><rect x="35" y="140" width="275" height="390" rx="25"/><text x="172" y="180">1 • ĐỐT GIẤY</text><ellipse cx="172" cy="455" rx="110" ry="34" class="glass-plate"/><path class="paper-sheet" d="M100 280h145v145H100Z"/><path class="paper-brown" d="M100 280h145v145H100Z"/><g class="paper-ash" fill="#55545a"><path d="M110 405l28-72 37 34 24-62 37 104-48 24-49-13Z"/><circle cx="128" cy="442" r="10"/><circle cx="170" cy="432" r="8"/><circle cx="216" cy="444" r="11"/></g><g class="paper-flame"><path d="M173 395c-45-48 14-81-3-130 62 42 72 91 3 130Z"/><path d="M173 382c-23-27 11-48 5-72 29 23 31 47-5 72Z"/></g><g class="paper-smoke"><circle cx="155" cy="270" r="16"/><circle cx="185" cy="238" r="21"/><circle cx="165" cy="203" r="17"/></g></g>
+        <g class="station-card sugar-card"><rect x="342" y="140" width="275" height="390" rx="25"/><text x="480" y="180">2 • ĐUN ĐƯỜNG</text><path class="tripod" d="M405 410h150M430 410l-35 95M530 410l35 95"/><path class="sugar-bowl" d="M390 325Q480 370 570 325L550 415H410Z"/><g class="sugar-grains"><circle cx="435" cy="340" r="10"/><circle cx="463" cy="332" r="9"/><circle cx="490" cy="341" r="11"/><circle cx="520" cy="330" r="9"/></g><path class="sugar-liquid" d="M410 365Q480 390 550 365V408H410Z"/><g class="sugar-smoke"><circle cx="450" cy="280" r="14"/><circle cx="485" cy="245" r="19"/><circle cx="520" cy="275" r="15"/></g><g class="burner sugar-burner"><rect x="445" y="455" width="70" height="52" rx="12"/><path class="burner-flame" d="M480 460c-35-36 12-59 2-91 43 30 46 63-2 91Z"/></g></g>
+        <g class="station-card coal-card"><rect x="650" y="140" width="275" height="390" rx="25"/><text x="787" y="180">3 • ĐỐT THAN</text><path class="stove" d="M700 380h175l-20 125H720Z"/><g class="coal-pieces"><path d="M720 360l35-55 50 9 25 46-40 40-55-12Z"/><path d="M780 350l35-45 48 25-12 60-58 8Z"/></g><g class="coal-embers"><circle cx="748" cy="350" r="34"/><circle cx="805" cy="345" r="38"/><circle cx="850" cy="365" r="27"/></g><g class="coal-ash"><circle cx="730" cy="410" r="14"/><circle cx="765" cy="425" r="18"/><circle cx="805" cy="412" r="15"/><circle cx="845" cy="428" r="17"/></g><g class="coal-smoke"><circle cx="750" cy="280" r="18"/><circle cx="790" cy="245" r="22"/><circle cx="830" cy="275" r="17"/></g></g>
+        <g class="safety-overlay"><text x="480" y="95">🕶️ Đeo kính và 🧤 găng tay trước khi làm thí nghiệm</text></g>
+      </svg></div>
+      <div class="memory-scene" id="memoryScene"><div class="memory-board"><span class="board-icon">🧠</span><h2>Biến đổi hóa học là gì?</h2><p>Biến đổi hóa học xảy ra khi có sự tạo thành <span class="blank ${''}" id="blankOne">________</span>.</p><div class="choices"><button data-blank="one" data-value="new">Chất mới</button><button data-blank="one" data-value="old">Chất cũ</button></div><p>Dấu hiệu thường gặp là sự thay đổi rõ rệt về <span class="blank" id="blankTwo">________________</span>.</p><div class="choices"><button data-blank="two" data-value="chemical">Màu sắc, mùi vị</button><button data-blank="two" data-value="physical">Kích thước, cân nặng</button></div><div class="memory-result" id="memoryResult">Chọn đáp án để hoàn thành ghi nhớ.</div></div></div>
+      <div class="challenge-scene" id="challengeScene"><div class="challenge-top" id="challengeTop">Tình huống 1 / 5</div><div class="scenario-card" id="scenarioCard" draggable="true"><span id="scenarioIcon">🔥</span><b id="scenarioName">Khúc gỗ cháy đen</b><small>Kéo hoặc chạm vào khu vực phù hợp</small></div><div class="chemical-zones"><button class="chem-zone yes-zone" data-answer="yes"><span>🧪</span><b>CÓ BIẾN ĐỔI HÓA HỌC</b><small>Có chất mới được tạo thành</small></button><button class="chem-zone no-zone" data-answer="no"><span>🔄</span><b>KHÔNG PHẢI</b><small>Không tạo ra chất mới</small></button></div></div>
+    </div></section></main>
+  </div>
+  <div class="modal-layer" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-icon" id="modalIcon">💡</div><h2 id="modalTitle"></h2><p id="modalText"></p><button id="modalClose">Đã hiểu</button></div></div><canvas id="confetti"></canvas>
+  <script src="../assets/js/lab-tuan-05.js" defer></script><script src="../assets/js/week-nav.js" defer></script>
 </body>
 </html>
-
