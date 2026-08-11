@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Phòng lab của Đất • Khoa học 5</title>
+  <meta name="description" content="Lab tương tác giúp học sinh lớp 5 khám phá thành phần và vai trò của đất." />
+  <link rel="stylesheet" href="../assets/css/lab.css" />
+</head>
+<body>
+<a class="back-home" href="../index.html" aria-label="Trở về thư viện 35 tuần">← Thư viện</a>
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><div class="brand-mark">🌱</div><div><h1>Phòng lab của Đất</h1><small>Khoa học lớp 5 • Học qua khám phá</small></div></div>
+    <nav class="phases" aria-label="Các chặng học">
+      <button class="phase-dot active" data-nav="1">1 <span>Khám phá</span></button>
+      <button class="phase-dot" data-nav="2">2 <span>Thí nghiệm</span></button>
+      <button class="phase-dot" data-nav="3">3 <span>Làm vườn</span></button>
+    </nav>
+  </header>
+  <main class="layout">
+    <aside class="panel" id="panel"></aside>
+    <section class="canvas-wrap">
+      <div class="canvas-card">
+        <div class="canvas-header"><span class="scene-tag" id="sceneTag">🔎 Kính hiển vi đất</span><span class="scene-tag" id="progressTag">Chặng 1 / 3</span></div>
+
+        <div class="scene active" id="scene1">
+          <svg viewBox="0 0 900 650" role="img" aria-label="Lát cắt cấu tạo đất với rễ cây, nước, không khí, chất khoáng và mùn">
+            <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#c9f0ed"/><stop offset="1" stop-color="#f7f3c2"/></linearGradient><linearGradient id="earth" x2="0" y2="1"><stop stop-color="#a86d43"/><stop offset="1" stop-color="#5c3828"/></linearGradient></defs>
+            <rect width="900" height="260" fill="url(#sky)"/><circle cx="760" cy="108" r="48" fill="#ffe07d" opacity=".8"/><g fill="#fff" opacity=".8"><ellipse cx="155" cy="102" rx="75" ry="25"/><ellipse cx="210" cy="102" rx="55" ry="33"/></g>
+            <rect y="250" width="900" height="400" fill="url(#earth)"/><path d="M0 272 Q95 230 180 268 T360 260 T540 270 T720 252 T900 268V650H0Z" fill="#815234" opacity=".75"/>
+            <g transform="translate(420 245)"><path d="M20 8C-4-45-62-73-100-58C-69-15-27 8 20 8Z" fill="#58a858"/><path d="M25 7C43-52 105-75 137-44C102-4 65 14 25 7Z" fill="#3e944b"/><path d="M22 13V-70" stroke="#3d7d42" stroke-width="13" stroke-linecap="round"/></g>
+            <g fill="#d9a15d" stroke="#5b3927" stroke-width="3"><circle cx="125" cy="350" r="27"/><circle cx="260" cy="425" r="36"/><circle cx="650" cy="340" r="35"/><circle cx="770" cy="520" r="31"/><circle cx="495" cy="525" r="23"/><circle cx="340" cy="320" r="18"/></g>
+            <g fill="#f0ca85"><circle cx="160" cy="505" r="16"/><circle cx="590" cy="445" r="19"/><circle cx="710" cy="600" r="17"/><circle cx="370" cy="580" r="23"/></g>
+            <g fill="#57b9e6" opacity=".9"><path d="M185 370c30 38 30 66 0 66s-30-28 0-66Z"/><path d="M690 392c24 31 24 54 0 54s-24-23 0-54Z"/><ellipse cx="535" cy="355" rx="28" ry="16"/></g>
+            <g fill="#fff" opacity=".86" stroke="#d8e7de" stroke-width="3"><ellipse cx="335" cy="400" rx="35" ry="26"/><ellipse cx="810" cy="330" rx="30" ry="22"/><ellipse cx="560" cy="585" rx="27" ry="20"/></g>
+            <g fill="#4d3022"><path d="M90 575l50-15 30 24-35 18Z"/><path d="M620 555l42-20 28 21-45 22Z"/><path d="M750 380l35-10 22 18-39 17Z"/></g>
+            <g fill="none" stroke="#ead0a0" stroke-width="11" stroke-linecap="round"><path d="M442 260C450 335 430 405 390 485S340 585 315 635"/><path d="M445 310c55 38 80 82 88 145s65 115 105 154"/><path d="M421 390c-42 7-80 35-113 83"/><path d="M468 412c38 4 72 27 100 62"/></g>
+            <g class="hotspot" data-tip="Rễ cây len qua khe đất, hút nước và chất dinh dưỡng; đồng thời giữ cây đứng vững."><circle cx="438" cy="364" r="17" fill="#fff27b" stroke="#fff" stroke-width="5"/><text x="438" y="371" text-anchor="middle" font-weight="900">?</text></g>
+            <g class="hotspot" data-tip="Các khe rỗng trong đất chứa không khí để rễ cây hô hấp."><circle cx="810" cy="330" r="17" fill="#fff27b" stroke="#fff" stroke-width="5"/><text x="810" y="337" text-anchor="middle" font-weight="900">?</text></g>
+            <g class="hotspot" data-tip="Nước nằm trong các khe nhỏ của đất và được rễ cây hút lên."><circle cx="690" cy="420" r="17" fill="#fff27b" stroke="#fff" stroke-width="5"/><text x="690" y="427" text-anchor="middle" font-weight="900">?</text></g>
+          </svg>
+          <div class="dropzone dz-air" tabindex="0" data-answer="Không khí">Khe rỗng</div><div class="dropzone dz-water" tabindex="0" data-answer="Nước">Túi chất lỏng</div><div class="dropzone dz-mineral" tabindex="0" data-answer="Chất khoáng">Hạt đất</div><div class="dropzone dz-humus" tabindex="0" data-answer="Mùn">Xác lá mục</div>
+        </div>
+
+        <div class="scene" id="scene2">
+          <div class="exp-scene active" id="expScene1"><svg viewBox="0 0 900 650" role="img" aria-label="Thí nghiệm thả cục đất vào cốc nước">
+            <rect width="900" height="650" fill="#eaf5ee"/><rect y="525" width="900" height="125" fill="#c58b5e"/><rect y="525" width="900" height="15" fill="#9d6844"/>
+            <text x="450" y="120" text-anchor="middle" font-size="25" font-weight="900" fill="#315a51">THÍ NGHIỆM 1 • KHÔNG KHÍ TRONG ĐẤT</text>
+            <g transform="translate(250 135)"><path d="M55 90h290l-28 340H83Z" fill="#fff" opacity=".5" stroke="#67aebb" stroke-width="8"/><path d="M77 235h246l-17 180H94Z" fill="#65c6e9" opacity=".68"/><ellipse cx="200" cy="235" rx="123" ry="14" fill="#9cdef0"/>
+              <g class="soil-clod"><path d="M147 38q49-48 106 0l16 43-57 38-79-32Z" fill="#785039" stroke="#593926" stroke-width="5"/><circle cx="175" cy="65" r="7" fill="#bd8858"/><circle cx="230" cy="77" r="9" fill="#4d3325"/></g>
+              <g fill="#fff" stroke="#bfe9f2" stroke-width="2"><circle class="bubble" cx="170" cy="345" r="10"/><circle class="bubble" cx="215" cy="360" r="7"/><circle class="bubble" cx="250" cy="335" r="12"/><circle class="bubble" cx="195" cy="390" r="6"/><circle class="bubble" cx="275" cy="385" r="8"/></g>
+            </g></svg></div>
+          <div class="exp-scene" id="expScene2"><svg viewBox="0 0 900 650" role="img" aria-label="Thí nghiệm nung đất trong ống nghiệm">
+            <rect width="900" height="650" fill="#edf3e8"/><rect y="525" width="900" height="125" fill="#c58b5e"/><rect y="525" width="900" height="15" fill="#9d6844"/><text x="450" y="110" text-anchor="middle" font-size="25" font-weight="900" fill="#315a51">THÍ NGHIỆM 2 • NƯỚC TRONG ĐẤT</text>
+            <path d="M292 195h316M340 195v330M560 195v330" stroke="#687c76" stroke-width="14" stroke-linecap="round"/><path d="M290 520h320" stroke="#687c76" stroke-width="18" stroke-linecap="round"/>
+            <g transform="rotate(15 450 330)"><path d="M365 170h170v255a85 85 0 01-170 0Z" fill="#fff" opacity=".52" stroke="#64a8b6" stroke-width="8"/><path d="M375 380h150v48a75 75 0 01-150 0Z" fill="#7a4e34"/><g fill="#71c9e8"><circle class="droplet" cx="400" cy="248" r="8"/><circle class="droplet" cx="470" cy="220" r="7"/><circle class="droplet" cx="500" cy="285" r="9"/><circle class="droplet" cx="425" cy="305" r="6"/></g><g fill="none" stroke="#b8e4e8" stroke-width="8" stroke-linecap="round"><path class="steam" d="M415 365q-30-40 4-73t0-65"/><path class="steam" d="M475 365q30-40-4-73t0-65"/></g></g>
+            <g transform="translate(410 455)"><rect x="-8" y="38" width="96" height="34" rx="12" fill="#7f8f89"/><path class="flame" d="M40 46C4 13 47-3 37-35c42 25 52 59 3 81Z" fill="#ff7b38"/><path class="flame" d="M40 40c-16-18 8-28 4-45 20 15 22 31-4 45Z" fill="#ffe169"/></g>
+          </svg></div>
+        </div>
+
+        <div class="scene" id="scene3"><svg viewBox="0 0 900 650" role="img" aria-label="Cây non và bộ rễ dưới đất trong khu vườn">
+          <defs><linearGradient id="gsky" x2="0" y2="1"><stop stop-color="#bde8ea"/><stop offset="1" stop-color="#fff4bb"/></linearGradient></defs><rect class="garden-sky" width="900" height="650" fill="url(#gsky)"/><circle cx="760" cy="110" r="58" fill="#ffdb68"/><g fill="#fff" opacity=".8"><ellipse cx="145" cy="105" rx="77" ry="26"/><ellipse cx="210" cy="107" rx="47" ry="36"/></g>
+          <path d="M0 370Q110 325 235 366T470 358T690 363T900 350V650H0Z" class="garden-soil" fill="#a56c43"/>
+          <g fill="#68432e" opacity=".6"><circle class="soil-speck" cx="140" cy="430" r="11"/><circle class="soil-speck" cx="260" cy="545" r="14"/><circle class="soil-speck" cx="680" cy="450" r="12"/><circle class="soil-speck" cx="770" cy="560" r="15"/></g>
+          <g class="water-pockets" fill="#61bee4"><path class="water-pocket" d="M235 448c23 29 23 50 0 50s-23-21 0-50Z"/><path class="water-pocket" d="M650 520c19 24 19 43 0 43s-19-19 0-43Z"/></g><g class="nutrients" fill="#f0c44e"><circle class="nutrient-dot" cx="350" cy="475" r="8"/><circle class="nutrient-dot" cx="540" cy="530" r="9"/><circle class="nutrient-dot" cx="440" cy="580" r="7"/><circle class="nutrient-dot" cx="585" cy="420" r="7"/></g>
+          <g transform="translate(450 360)"><g class="plant stage-1" id="plant"><g class="roots" fill="none" stroke="#f2d29e" stroke-width="10" stroke-linecap="round"><path d="M0 0C-2 68-42 118-75 180"/><path d="M2 35c54 34 62 97 90 145"/><path d="M-10 70c-38 8-60 32-85 65"/><path d="M17 95c35 9 58 32 76 58"/></g><g transform="translate(0 4)"><path class="plant-stem" d="M0 0C-3-64 5-125 0-188"/><path class="leaf" d="M-4-112C-54-111-99-140-111-179-58-190-18-161 0-127Z"/><path class="leaf-vein" d="M-3-126L-86-168"/><path class="leaf" d="M4-151C47-184 103-184 126-147 92-106 43-105 3-128Z"/><path class="leaf-vein" d="M7-137L101-151"/><path class="leaf" d="M-2-62C-41-61-76-84-86-115-43-126-12-105 2-76Z"/><path class="leaf-vein" d="M-1-73L-65-105"/><path class="leaf" d="M3-91C34-113 73-111 91-84 65-54 31-57 3-72Z"/><path class="leaf-vein" d="M5-80L69-88"/><path class="leaf" d="M0-181C-21-205-19-233 1-252 23-231 24-202 0-181Z"/><g class="flower"><circle cx="0" cy="-266" r="19" fill="#f5a4c5"/><circle cx="-19" cy="-258" r="18" fill="#f27ead"/><circle cx="19" cy="-258" r="18" fill="#f27ead"/><circle cx="0" cy="-255" r="11" fill="#ffd45a"/></g></g></g></g>
+          <g id="gardenParticles" fill="#8b5d3f" opacity="0"><circle cx="335" cy="360" r="8"/><circle cx="590" cy="355" r="7"/><circle cx="530" cy="380" r="6"/></g>
+        </svg></div>
+        <div class="tooltip" id="tooltip"></div>
+      </div>
+    </section>
+  </main>
+</div>
+<div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-icon" id="modalIcon">💡</div><h3 id="modalTitle">Kết luận</h3><p id="modalText"></p><button id="modalClose">Đã hiểu!</button></div></div>
+<canvas class="confetti" id="confetti"></canvas>
+<script src="../assets/js/lab-tuan-01.js" defer></script>
+<script src="../assets/js/week-nav.js" defer></script>
+</body>
+</html>
